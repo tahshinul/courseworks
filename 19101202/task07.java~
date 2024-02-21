@@ -1,0 +1,19 @@
+import java.util.*;
+public class task07 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please enter Quantity of lines");
+        int lineQuanitity = scanner.nextInt();
+        String space = " ";
+        for(int lineCount = 1; lineCount <= lineQuanitity; ++lineCount) {
+            
+            for(int spaceCount = 1; spaceCount <= lineQuantity; ++spaceCount) {
+                System.out.print(space);
+                for( int starCount = 1; starCount <= lineCount; ++starCount) {
+                System.out.print('*');
+                }
+            }
+            System.out.println();
+        }
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.*;
+public class whatever {
+  public static void main(String[] args) {
+    scanner sc = new scanner(System.in);
+    int[] a = new int[5];
+    for (x=1 ; x < a.length) {
+      System.out.println("please enter a number: ");
+      int waiting = sc.nextInt();
+      for ( y=1 ; y <= a.length-1 ; y++) {
+        boolean duplicate = false;
+        if ( a[y] = waiting ) {
+          duplicate = true ;
+          System.out.println("please enter a number: ");
+        }
+        else if (!duplicate) {
+          a[x]= waiting;
+          ++x;
+        }
+      }
+    }
+  }
+          
+    
+    

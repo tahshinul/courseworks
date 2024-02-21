@@ -1,0 +1,29 @@
+import static java.lang.System.*;
+public class LearningToSortCommon { 
+    public static void main (String[] args) {
+        int v;
+        int[] a = {77, 66, 88, 44, 99};
+        int position=0;
+        while(position < a.length-1) {
+            int boroSoFar = a[position];//77
+            int boroLocation = position;
+            v=position+1;
+            while (v < a.length) {
+                if (a[v] > boroSoFar) {
+                    boroSoFar = a[v];//88
+                    boroLocation = v;//2
+                }
+                ++v;
+            }       
+            int icu = a[position];
+            a[position] = boroSoFar;
+            a[boroLocation] = icu;
+            ++position;
+        }
+        v=0;
+        while(v < a.length) {
+            out.print(a[v]+" ");
+            ++v;
+        }
+    }
+}

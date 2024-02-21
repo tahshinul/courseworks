@@ -1,0 +1,26 @@
+import java.util.*;
+public class NoDuplicate {
+    public static void main(String[] args) { 
+        Scanner scanner = new Scanner (System.in);
+        int[] a = new int[5];
+        for(int index = 0; index < a.length; ) {
+            System.out.print("Please type a number: ");
+            int waiting = scanner.nextInt();
+            boolean duplicate = false;
+            for(int checkLocation = 0; checkLocation <= index - 1; ++checkLocation) {
+                if (a[checkLocation] == waiting) {
+                    duplicate = true;
+                    System.out.println(waiting + " is duplicate, please try again");
+                    break;
+                }
+            }
+            if (!duplicate) {
+                a[index] = waiting;
+                ++index;
+            } 
+        }
+        for(int index = 0; index < a.length; ++index) {
+            System.out.print(a[index] + " ");
+        }
+    }
+}
